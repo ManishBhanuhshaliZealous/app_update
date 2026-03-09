@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github_apk_updater/github_apk_updater.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +56,19 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-
+  final updater = GithubApkUpdater(
+    config: UpdaterConfig(
+      githubUsername: 'ManishBhanuhshaliZealous',
+      githubRepo: 'app_update',
+    ),
+  );
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      updater.check(context);
+    });
+  }
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
