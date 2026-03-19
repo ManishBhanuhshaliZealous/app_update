@@ -100,10 +100,10 @@ packages:
     dependency: "direct main"
     description:
       name: github_apk_updater
-      sha256: c197aea6cf90da5757e0b7878810d05035ff673579556cb63e18926349f94493
+      sha256: "40b544187b9ec1cb52b2af78cc10ca81cb84d1e805de3069465bfce1d6db94c8"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.8"
+    version: "1.0.9"
   http:
     dependency: transitive
     description:
